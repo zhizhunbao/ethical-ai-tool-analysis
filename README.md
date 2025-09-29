@@ -11,10 +11,6 @@ A comprehensive static website for analyzing and comparing ethical AI tools, bui
 
 ---
 
-## 中文
-
-一个全面的静态网站，用于分析和比较伦理AI工具，专为学术演示目的而构建。
-
 ## 🎯 Project Overview
 
 This project presents a detailed analysis of three key ethical AI tools across different domains:
