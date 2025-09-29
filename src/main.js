@@ -20,7 +20,7 @@ const i18n = {
         'overview.courseCode': 'Course:',
         'overview.courseTitle': 'PHI4005 - Ethics in Artificial Intelligence',
         'overview.semester': 'Semester:',
-        'overview.semesterValue': 'Fall 2024',
+        'overview.semesterValue': 'Fall 2025',
         'overview.team': 'Team Members',
         'agenda.title': 'Presentation Agenda',
         'fairness.title': 'Fairness Tool Analysis',
@@ -29,7 +29,15 @@ const i18n = {
         'comparison.title': 'Comparative Summary',
         'references.title': 'References',
         'compliance.title': 'Compliance Note',
-        'compliance.text': 'This presentation strictly adheres to course requirements and does not use AI ethics tools developed by Microsoft or IBM.'
+        'compliance.text': 'This presentation strictly adheres to course requirements and does not use AI ethics tools developed by Microsoft or IBM.',
+        'tool.overview': 'Tool Overview',
+        'tool.developer': 'Developer:',
+        'tool.license': 'License:',
+        'tool.language': 'Language:',
+        'tool.approach': 'Approach & Workflow',
+        'tool.strengths': 'Strengths',
+        'tool.limitations': 'Limitations',
+        'tool.realWorldCase': 'Real-World Case & Risk Mitigation'
     },
     zh: {
         'nav.title': 'AI伦理工具分析',
@@ -47,7 +55,7 @@ const i18n = {
         'overview.courseCode': '课程：',
         'overview.courseTitle': 'PHI4005 - 人工智能伦理学',
         'overview.semester': '学期：',
-        'overview.semesterValue': '2024年秋季',
+        'overview.semesterValue': '2025年秋季',
         'overview.team': '团队成员',
         'agenda.title': '演示议程',
         'fairness.title': '公平性工具分析',
@@ -56,7 +64,15 @@ const i18n = {
         'comparison.title': '对比总结',
         'references.title': '参考文献',
         'compliance.title': '合规声明',
-        'compliance.text': '本演示严格遵守课程要求，未使用微软或IBM开发的AI伦理工具。'
+        'compliance.text': '本演示严格遵守课程要求，未使用微软或IBM开发的AI伦理工具。',
+        'tool.overview': '工具概述',
+        'tool.developer': '开发者：',
+        'tool.license': '许可证：',
+        'tool.language': '语言：',
+        'tool.approach': '方法与工作流程',
+        'tool.strengths': '优势',
+        'tool.limitations': '局限性',
+        'tool.realWorldCase': '实际案例与风险缓解'
     }
 };
 
@@ -157,6 +173,9 @@ function updateLanguage() {
         element.textContent = translation;
     });
     
+    // Re-render dynamic content with new language
+    renderContent();
+    
     // Update document language attribute
     document.documentElement.setAttribute('lang', currentLanguage);
 }
@@ -215,20 +234,20 @@ function renderToolSection(toolType) {
             <div class="tool-info">
                 <div class="tool-name">${tool.name || 'Tool Name'}</div>
                 <h3>${tool.category || 'Category'}</h3>
-                <p><strong>Developer:</strong> ${tool.developer || 'Developer'}</p>
-                <p><strong>License:</strong> ${tool.license || 'License'}</p>
-                <p><strong>Language:</strong> ${tool.language || 'Language'}</p>
+                <p><strong>${i18n[currentLanguage]['tool.developer']}</strong> ${tool.developer || 'Developer'}</p>
+                <p><strong>${i18n[currentLanguage]['tool.license']}</strong> ${tool.license || 'License'}</p>
+                <p><strong>${i18n[currentLanguage]['tool.language']}</strong> ${tool.language || 'Language'}</p>
             </div>
             <div class="tool-description">
-                <h4>Tool Overview</h4>
+                <h4>${i18n[currentLanguage]['tool.overview']}</h4>
                 <p>${tool.overview || 'Tool overview description.'}</p>
             </div>
         </div>
         <div class="tool-subsections">
-            ${renderToolSubsection('Approach & Workflow', tool.approach)}
-            ${renderToolSubsection('Strengths', tool.strengths)}
-            ${renderToolSubsection('Limitations', tool.limitations)}
-            ${renderToolSubsection('Real-World Case & Risk Mitigation', tool.realWorldCase)}
+            ${renderToolSubsection(i18n[currentLanguage]['tool.approach'], tool.approach)}
+            ${renderToolSubsection(i18n[currentLanguage]['tool.strengths'], tool.strengths)}
+            ${renderToolSubsection(i18n[currentLanguage]['tool.limitations'], tool.limitations)}
+            ${renderToolSubsection(i18n[currentLanguage]['tool.realWorldCase'], tool.realWorldCase)}
         </div>
     `;
 }

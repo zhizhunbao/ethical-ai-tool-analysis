@@ -19,65 +19,65 @@
     "en": [
       {
         "title": "Project Overview",
-        "description": "Introduction to ethical AI tool analysis methodology and team presentation",
-        "duration": "5 minutes"
+        "description": "Introduction to ethical AI tool analysis and team presentation",
+        "duration": "2 minutes"
       },
       {
         "title": "Fairness Tool Analysis",
-        "description": "Comprehensive evaluation of Aequitas framework for algorithmic fairness assessment",
-        "duration": "8 minutes"
+        "description": "Key highlights of Aequitas framework for algorithmic fairness",
+        "duration": "3 minutes"
       },
       {
         "title": "Transparency Tool Analysis", 
-        "description": "In-depth analysis of LIME (Local Interpretable Model-agnostic Explanations) tool",
-        "duration": "8 minutes"
+        "description": "Essential features of LIME for model interpretability",
+        "duration": "3 minutes"
       },
       {
         "title": "Privacy Tool Analysis",
-        "description": "Detailed examination of Opacus differential privacy framework",
-        "duration": "8 minutes"
+        "description": "Core capabilities of Opacus differential privacy framework",
+        "duration": "3 minutes"
       },
       {
         "title": "Comparative Summary",
-        "description": "Side-by-side comparison of all three tools with recommendations",
-        "duration": "6 minutes"
+        "description": "Quick comparison and key takeaways from all three tools",
+        "duration": "3 minutes"
       },
       {
         "title": "Q&A Session",
         "description": "Questions and discussion with audience",
-        "duration": "5 minutes"
+        "duration": "1-3 minutes"
       }
     ],
     "zh": [
       {
         "title": "项目概述",
-        "description": "AI伦理工具分析方法论介绍和团队展示",
-        "duration": "5分钟"
+        "description": "AI伦理工具分析介绍和团队展示",
+        "duration": "2分钟"
       },
       {
         "title": "公平性工具分析",
-        "description": "Aequitas算法公平性评估框架的综合评估",
-        "duration": "8分钟"
+        "description": "Aequitas算法公平性框架的关键亮点",
+        "duration": "3分钟"
       },
       {
         "title": "透明度工具分析",
-        "description": "LIME（局部可解释模型无关解释）工具的深入分析",
-        "duration": "8分钟"
+        "description": "LIME模型可解释性的核心功能",
+        "duration": "3分钟"
       },
       {
         "title": "隐私工具分析",
-        "description": "Opacus差分隐私框架的详细检查",
-        "duration": "8分钟"
+        "description": "Opacus差分隐私框架的核心能力",
+        "duration": "3分钟"
       },
       {
         "title": "对比总结",
-        "description": "三种工具的并列比较及建议",
-        "duration": "6分钟"
+        "description": "三种工具的快速比较和关键要点",
+        "duration": "3分钟"
       },
       {
         "title": "问答环节",
         "description": "与观众的问题和讨论",
-        "duration": "5分钟"
+        "duration": "1-3分钟"
       }
     ]
   },
@@ -182,7 +182,7 @@
       "zh": {
         "name": "LIME",
         "category": "模型可解释性与可解释性",
-        "developer": "华盛顿大学与Marco Tulio Ribeiro",
+        "developer": "华盛顿大学与Marco Tulio Ribeiro（马可·图利奥·里贝罗）",
         "license": "BSD 2-Clause许可证",
         "language": "Python",
         "overview": "LIME（局部可解释模型无关解释）是一种以可解释和忠实的方式解释任何分类器预测的技术 <a href=\"#ref-4\" class=\"citation\">[4]</a>。通过在预测周围局部学习可解释模型，LIME提供了对模型为何做出特定决策的洞察，使黑盒模型更加透明和可信。",
