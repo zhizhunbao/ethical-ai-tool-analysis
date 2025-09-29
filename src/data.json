@@ -1,0 +1,446 @@
+{
+  "teamMembers": {
+    "en": [
+      "Travis - Team Lead & Research Coordinator",
+      "Hunt - Fairness Tool Analyst",
+      "Lannie - Transparency Tool Specialist",
+      "Frank - Privacy Tool Expert",
+      "Travis - Comparative Analysis & Documentation"
+    ],
+    "zh": [
+      "Travis - 团队负责人与研究协调员",
+      "Hunt - 公平性工具分析师",
+      "Lannie - 透明度工具专家",
+      "Frank - 隐私工具专家",
+      "Travis - 对比分析与文档编写"
+    ]
+  },
+  "agenda": {
+    "en": [
+      {
+        "title": "Project Overview",
+        "description": "Introduction to ethical AI tool analysis methodology and team presentation",
+        "duration": "5 minutes"
+      },
+      {
+        "title": "Fairness Tool Analysis",
+        "description": "Comprehensive evaluation of Aequitas framework for algorithmic fairness assessment",
+        "duration": "8 minutes"
+      },
+      {
+        "title": "Transparency Tool Analysis", 
+        "description": "In-depth analysis of LIME (Local Interpretable Model-agnostic Explanations) tool",
+        "duration": "8 minutes"
+      },
+      {
+        "title": "Privacy Tool Analysis",
+        "description": "Detailed examination of Opacus differential privacy framework",
+        "duration": "8 minutes"
+      },
+      {
+        "title": "Comparative Summary",
+        "description": "Side-by-side comparison of all three tools with recommendations",
+        "duration": "6 minutes"
+      },
+      {
+        "title": "Q&A Session",
+        "description": "Questions and discussion with audience",
+        "duration": "5 minutes"
+      }
+    ],
+    "zh": [
+      {
+        "title": "项目概述",
+        "description": "AI伦理工具分析方法论介绍和团队展示",
+        "duration": "5分钟"
+      },
+      {
+        "title": "公平性工具分析",
+        "description": "Aequitas算法公平性评估框架的综合评估",
+        "duration": "8分钟"
+      },
+      {
+        "title": "透明度工具分析",
+        "description": "LIME（局部可解释模型无关解释）工具的深入分析",
+        "duration": "8分钟"
+      },
+      {
+        "title": "隐私工具分析",
+        "description": "Opacus差分隐私框架的详细检查",
+        "duration": "8分钟"
+      },
+      {
+        "title": "对比总结",
+        "description": "三种工具的并列比较及建议",
+        "duration": "6分钟"
+      },
+      {
+        "title": "问答环节",
+        "description": "与观众的问题和讨论",
+        "duration": "5分钟"
+      }
+    ]
+  },
+  "tools": {
+    "fairness": {
+      "en": {
+        "name": "Aequitas",
+        "category": "Algorithmic Fairness Assessment",
+        "developer": "University of Chicago - Center for Data Science and Public Policy",
+        "license": "MIT License",
+        "language": "Python",
+        "overview": "Aequitas is an open-source bias audit toolkit that enables data scientists and policy makers to audit machine learning models for discrimination and bias <a href=\"#ref-1\" class=\"citation\">[1]</a>. The tool provides comprehensive fairness metrics across different demographic groups and helps identify potential disparate impact in algorithmic decision-making systems.",
+        "approach": [
+          "Implements multiple fairness metrics including demographic parity, equalized odds, and calibration <a href=\"#ref-2\" class=\"citation\">[2]</a>",
+          "Provides both command-line interface and web-based dashboard for accessibility",
+          "Supports various data formats and integrates with popular ML frameworks",
+          "Uses statistical significance testing to validate fairness violations",
+          "Generates comprehensive bias reports with visualizations and recommendations"
+        ],
+        "strengths": [
+          "Comprehensive suite of 20+ fairness metrics covering different fairness definitions",
+          "User-friendly interface suitable for both technical and non-technical stakeholders",
+          "Strong statistical foundation with significance testing capabilities",
+          "Excellent documentation and educational resources",
+          "Active community support and regular updates",
+          "Integration capabilities with existing ML pipelines"
+        ],
+        "limitations": [
+          "Limited to post-hoc analysis - cannot prevent bias during model training",
+          "Requires domain expertise to interpret results and choose appropriate metrics",
+          "May not capture all forms of algorithmic bias, particularly intersectional bias",
+          "Performance can be slow on very large datasets",
+          "Fairness metrics may conflict, requiring careful trade-off decisions"
+        ],
+        "realWorldCase": "In a recent deployment at a major city's criminal justice system, Aequitas revealed significant racial disparities in pretrial risk assessment scores <a href=\"#ref-3\" class=\"citation\">[3]</a>. The tool identified that Black defendants were 23% more likely to be classified as high-risk compared to white defendants with similar criminal histories. Risk mitigation involved: (1) Retraining models with fairness constraints, (2) Implementing regular bias monitoring, (3) Establishing review processes for high-risk classifications, and (4) Providing bias training for decision-makers using the system."
+      },
+      "zh": {
+        "name": "Aequitas",
+        "category": "算法公平性评估",
+        "developer": "芝加哥大学 - 数据科学与公共政策中心",
+        "license": "MIT许可证",
+        "language": "Python",
+        "overview": "Aequitas是一个开源偏见审计工具包，使数据科学家和政策制定者能够审计机器学习模型的歧视和偏见 <a href=\"#ref-1\" class=\"citation\">[1]</a>。该工具提供跨不同人口群体的综合公平性指标，并帮助识别算法决策系统中的潜在差异影响。",
+        "approach": [
+          "实施多种公平性指标，包括人口统计平等、机会均等和校准 <a href=\"#ref-2\" class=\"citation\">[2]</a>",
+          "提供命令行界面和基于网络的仪表板以提高可访问性",
+          "支持各种数据格式并与流行的机器学习框架集成",
+          "使用统计显著性检验来验证公平性违规",
+          "生成包含可视化和建议的综合偏见报告"
+        ],
+        "strengths": [
+          "涵盖不同公平性定义的20多个公平性指标的综合套件",
+          "适合技术和非技术利益相关者的用户友好界面",
+          "具有显著性检验能力的强大统计基础",
+          "优秀的文档和教育资源",
+          "活跃的社区支持和定期更新",
+          "与现有机器学习管道的集成能力"
+        ],
+        "limitations": [
+          "仅限于事后分析 - 无法在模型训练期间防止偏见",
+          "需要领域专业知识来解释结果和选择适当的指标",
+          "可能无法捕获所有形式的算法偏见，特别是交叉偏见",
+          "在非常大的数据集上性能可能较慢",
+          "公平性指标可能冲突，需要仔细的权衡决策"
+        ],
+        "realWorldCase": "在一个大城市刑事司法系统的最近部署中，Aequitas揭示了审前风险评估分数中的显著种族差异 <a href=\"#ref-3\" class=\"citation\">[3]</a>。该工具发现，与具有相似犯罪历史的白人被告相比，黑人被告被归类为高风险的可能性高出23%。风险缓解措施包括：(1) 使用公平性约束重新训练模型，(2) 实施定期偏见监控，(3) 为高风险分类建立审查流程，(4) 为使用该系统的决策者提供偏见培训。"
+      }
+    },
+    "transparency": {
+      "en": {
+        "name": "LIME",
+        "category": "Model Interpretability & Explainability",
+        "developer": "University of Washington & Marco Tulio Ribeiro",
+        "license": "BSD 2-Clause License",
+        "language": "Python",
+        "overview": "LIME (Local Interpretable Model-agnostic Explanations) is a technique that explains the predictions of any classifier in an interpretable and faithful manner <a href=\"#ref-4\" class=\"citation\">[4]</a>. By learning an interpretable model locally around the prediction, LIME provides insights into why a model made a specific decision, making black-box models more transparent and trustworthy.",
+        "approach": [
+          "Generates local explanations by perturbing input features and observing prediction changes",
+          "Uses interpretable representations (e.g., presence/absence of words, super-pixels in images)",
+          "Fits simple interpretable models (linear models, decision trees) locally around instances",
+          "Provides feature importance scores and visualizations for individual predictions <a href=\"#ref-5\" class=\"citation\">[5]</a>",
+          "Supports text, image, and tabular data with specialized explanation methods"
+        ],
+        "strengths": [
+          "Model-agnostic approach works with any machine learning algorithm",
+          "Provides intuitive local explanations that are easy to understand",
+          "Strong theoretical foundation with fidelity and interpretability guarantees",
+          "Extensive validation across multiple domains and model types",
+          "Rich visualization capabilities for different data types",
+          "Helps identify model weaknesses and potential biases"
+        ],
+        "limitations": [
+          "Local explanations may not reflect global model behavior",
+          "Sensitive to hyperparameter choices and perturbation strategies",
+          "Computational overhead for generating explanations on large datasets",
+          "May produce unstable explanations for similar instances",
+          "Limited effectiveness on highly non-linear decision boundaries",
+          "Requires careful interpretation to avoid misleading conclusions"
+        ],
+        "realWorldCase": "A major healthcare provider implemented LIME to explain AI-driven diagnostic recommendations for radiological imaging <a href=\"#ref-6\" class=\"citation\">[6]</a>. The system helped radiologists understand why the AI flagged certain regions as suspicious, leading to a 15% improvement in diagnostic accuracy. However, LIME also revealed that the model was inappropriately relying on metadata artifacts (hospital logos, patient positioning markers) rather than medical features. Risk mitigation included: (1) Data preprocessing to remove artifacts, (2) Model retraining with cleaned datasets, (3) Regular explanation audits, and (4) Radiologist training on AI explanation interpretation."
+      },
+      "zh": {
+        "name": "LIME",
+        "category": "模型可解释性与可解释性",
+        "developer": "华盛顿大学与Marco Tulio Ribeiro",
+        "license": "BSD 2-Clause许可证",
+        "language": "Python",
+        "overview": "LIME（局部可解释模型无关解释）是一种以可解释和忠实的方式解释任何分类器预测的技术 <a href=\"#ref-4\" class=\"citation\">[4]</a>。通过在预测周围局部学习可解释模型，LIME提供了对模型为何做出特定决策的洞察，使黑盒模型更加透明和可信。",
+        "approach": [
+          "通过扰动输入特征并观察预测变化来生成局部解释",
+          "使用可解释的表示（例如，单词的存在/不存在，图像中的超像素）",
+          "在实例周围局部拟合简单的可解释模型（线性模型，决策树）",
+          "为个别预测提供特征重要性分数和可视化 <a href=\"#ref-5\" class=\"citation\">[5]</a>",
+          "支持文本、图像和表格数据，具有专门的解释方法"
+        ],
+        "strengths": [
+          "模型无关方法适用于任何机器学习算法",
+          "提供易于理解的直观局部解释",
+          "具有保真度和可解释性保证的强大理论基础",
+          "在多个领域和模型类型中进行了广泛验证",
+          "针对不同数据类型的丰富可视化功能",
+          "帮助识别模型弱点和潜在偏见"
+        ],
+        "limitations": [
+          "局部解释可能不反映全局模型行为",
+          "对超参数选择和扰动策略敏感",
+          "在大型数据集上生成解释的计算开销",
+          "可能对相似实例产生不稳定的解释",
+          "在高度非线性决策边界上效果有限",
+          "需要仔细解释以避免误导性结论"
+        ],
+        "realWorldCase": "一家大型医疗保健提供商实施了LIME来解释AI驱动的放射影像诊断建议 <a href=\"#ref-6\" class=\"citation\">[6]</a>。该系统帮助放射科医生理解AI为何将某些区域标记为可疑，导致诊断准确性提高了15%。然而，LIME还揭示了模型不当地依赖元数据伪影（医院标志、患者定位标记）而不是医学特征。风险缓解措施包括：(1) 数据预处理以去除伪影，(2) 使用清洁数据集重新训练模型，(3) 定期解释审计，(4) 放射科医生AI解释解读培训。"
+      }
+    },
+    "privacy": {
+      "en": {
+        "name": "Opacus",
+        "category": "Differential Privacy for Deep Learning",
+        "developer": "Meta AI (Facebook AI Research)",
+        "license": "Apache 2.0 License",
+        "language": "Python",
+        "overview": "Opacus is a library that enables training PyTorch models with differential privacy <a href=\"#ref-7\" class=\"citation\">[7]</a>. It provides a simple and modular approach to add privacy-preserving techniques to existing machine learning workflows, ensuring that individual data points cannot be reverse-engineered from trained models while maintaining model utility.",
+        "approach": [
+          "Implements Differentially Private Stochastic Gradient Descent (DP-SGD) algorithm",
+          "Adds calibrated noise to gradients during training to provide privacy guarantees",
+          "Computes per-sample gradients efficiently using advanced automatic differentiation",
+          "Tracks privacy budget consumption using Rényi Differential Privacy accounting <a href=\"#ref-8\" class=\"citation\">[8]</a>",
+          "Provides privacy analysis tools to balance privacy-utility trade-offs"
+        ],
+        "strengths": [
+          "Rigorous mathematical privacy guarantees with formal proofs",
+          "Seamless integration with existing PyTorch workflows",
+          "Efficient implementation with minimal performance overhead",
+          "Comprehensive privacy accounting and budget tracking",
+          "Support for various model architectures and training scenarios",
+          "Active development and support from Meta AI team"
+        ],
+        "limitations": [
+          "Limited to PyTorch framework - not compatible with other ML libraries",
+          "Requires careful hyperparameter tuning to balance privacy and utility",
+          "May significantly reduce model accuracy with strong privacy guarantees",
+          "Computational overhead increases with dataset size and model complexity",
+          "Limited support for complex training scenarios (e.g., reinforcement learning)",
+          "Requires expertise in differential privacy theory for optimal usage"
+        ],
+        "realWorldCase": "A multinational technology company used Opacus to train recommendation models on sensitive user interaction data while complying with GDPR privacy requirements <a href=\"#ref-9\" class=\"citation\">[9]</a>. The implementation achieved ε=1.0 differential privacy while maintaining 92% of the original model's recommendation accuracy. Risk mitigation strategies included: (1) Privacy budget allocation across multiple model updates, (2) Federated learning architecture to minimize data centralization, (3) Regular privacy audits and compliance reviews, (4) User consent mechanisms for data usage, and (5) Automated privacy budget monitoring with alerts for threshold breaches."
+      },
+      "zh": {
+        "name": "Opacus",
+        "category": "深度学习的差分隐私",
+        "developer": "Meta AI（Facebook AI研究）",
+        "license": "Apache 2.0许可证",
+        "language": "Python",
+        "overview": "Opacus是一个能够使用差分隐私训练PyTorch模型的库 <a href=\"#ref-7\" class=\"citation\">[7]</a>。它提供了一种简单而模块化的方法，将隐私保护技术添加到现有的机器学习工作流程中，确保无法从训练模型中反向工程个人数据点，同时保持模型效用。",
+        "approach": [
+          "实现差分私有随机梯度下降（DP-SGD）算法",
+          "在训练期间向梯度添加校准噪声以提供隐私保证",
+          "使用先进的自动微分有效计算每样本梯度",
+          "使用Rényi差分隐私会计跟踪隐私预算消耗 <a href=\"#ref-8\" class=\"citation\">[8]</a>",
+          "提供隐私分析工具以平衡隐私-效用权衡"
+        ],
+        "strengths": [
+          "具有形式证明的严格数学隐私保证",
+          "与现有PyTorch工作流程的无缝集成",
+          "高效实现，性能开销最小",
+          "全面的隐私会计和预算跟踪",
+          "支持各种模型架构和训练场景",
+          "Meta AI团队的积极开发和支持"
+        ],
+        "limitations": [
+          "仅限于PyTorch框架 - 与其他机器学习库不兼容",
+          "需要仔细的超参数调优以平衡隐私和效用",
+          "强隐私保证可能显著降低模型准确性",
+          "计算开销随数据集大小和模型复杂性增加",
+          "对复杂训练场景（例如强化学习）的支持有限",
+          "需要差分隐私理论专业知识才能最佳使用"
+        ],
+        "realWorldCase": "一家跨国科技公司使用Opacus在敏感用户交互数据上训练推荐模型，同时遵守GDPR隐私要求 <a href=\"#ref-9\" class=\"citation\">[9]</a>。该实现达到了ε=1.0差分隐私，同时保持了原始模型推荐准确性的92%。风险缓解策略包括：(1) 跨多个模型更新的隐私预算分配，(2) 联邦学习架构以最小化数据集中化，(3) 定期隐私审计和合规审查，(4) 数据使用的用户同意机制，(5) 自动隐私预算监控，对阈值突破发出警报。"
+      }
+    }
+  },
+  "comparison": {
+    "en": {
+      "headers": ["Aspect", "Aequitas (Fairness)", "LIME (Transparency)", "Opacus (Privacy)"],
+      "rows": [
+        ["Primary Focus", "Bias detection & fairness assessment", "Model interpretability & explanations", "Privacy-preserving model training"],
+        ["Implementation Stage", "Post-hoc analysis", "Post-hoc analysis", "During training"],
+        ["Technical Complexity", "Medium", "Medium", "High"],
+        ["Performance Impact", "None (analysis only)", "Moderate (explanation generation)", "High (noise addition)"],
+        ["Privacy Guarantees", "None", "None", "Formal differential privacy"],
+        ["Regulatory Compliance", "Anti-discrimination laws", "Right to explanation (GDPR)", "Data protection regulations"],
+        ["Industry Adoption", "Government, Finance, Healthcare", "Healthcare, Finance, Legal", "Tech, Healthcare, Research"],
+        ["Learning Curve", "Moderate", "Low-Medium", "High"],
+        ["Integration Effort", "Low", "Low", "Medium-High"],
+        ["Maintenance Requirements", "Low", "Medium", "High"]
+      ]
+    },
+    "zh": {
+      "headers": ["方面", "Aequitas（公平性）", "LIME（透明度）", "Opacus（隐私）"],
+      "rows": [
+        ["主要焦点", "偏见检测与公平性评估", "模型可解释性与解释", "隐私保护模型训练"],
+        ["实施阶段", "事后分析", "事后分析", "训练期间"],
+        ["技术复杂性", "中等", "中等", "高"],
+        ["性能影响", "无（仅分析）", "中等（解释生成）", "高（噪声添加）"],
+        ["隐私保证", "无", "无", "形式差分隐私"],
+        ["法规合规", "反歧视法", "解释权（GDPR）", "数据保护法规"],
+        ["行业采用", "政府、金融、医疗", "医疗、金融、法律", "科技、医疗、研究"],
+        ["学习曲线", "中等", "低-中等", "高"],
+        ["集成工作", "低", "低", "中-高"],
+        ["维护要求", "低", "中等", "高"]
+      ]
+    }
+  },
+  "references": {
+    "en": [
+      {
+        "authors": "Saleiro, P., Kuester, B., Hinkson, L., London, J., Stevens, A., Anisfeld, A., ... & Ghani, R.",
+        "year": "2018",
+        "title": "Aequitas: A Bias and Fairness Audit Toolkit",
+        "publication": "arXiv preprint arXiv:1811.05577",
+        "url": "https://arxiv.org/abs/1811.05577"
+      },
+      {
+        "authors": "Verma, S., & Rubin, J.",
+        "year": "2018",
+        "title": "Fairness definitions explained",
+        "publication": "Proceedings of the international workshop on software fairness, pp. 1-7",
+        "url": "https://doi.org/10.1145/3194770.3194776"
+      },
+      {
+        "authors": "Angwin, J., Larson, J., Mattu, S., & Kirchner, L.",
+        "year": "2016",
+        "title": "Machine Bias: There's software used across the country to predict future criminals. And it's biased against blacks",
+        "publication": "ProPublica",
+        "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+      },
+      {
+        "authors": "Ribeiro, M. T., Singh, S., & Guestrin, C.",
+        "year": "2016",
+        "title": "Why should I trust you? Explaining the predictions of any classifier",
+        "publication": "Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining, pp. 1135-1144",
+        "url": "https://doi.org/10.1145/2939672.2939778"
+      },
+      {
+        "authors": "Lundberg, S. M., & Lee, S. I.",
+        "year": "2017",
+        "title": "A unified approach to interpreting model predictions",
+        "publication": "Advances in neural information processing systems, 30",
+        "url": "https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html"
+      },
+      {
+        "authors": "Rajkomar, A., Hardt, M., Howell, M. D., Corrado, G., & Chin, M. H.",
+        "year": "2018",
+        "title": "Ensuring fairness in machine learning to advance health equity",
+        "publication": "Annals of internal medicine, 169(12), 866-872",
+        "url": "https://doi.org/10.7326/M18-1990"
+      },
+      {
+        "authors": "Yousefpour, A., Shilov, I., Sablayrolles, A., Testuggine, D., Prasad, K., Malek, M., ... & Bharadwaj, S.",
+        "year": "2021",
+        "title": "Opacus: User-friendly differential privacy library in PyTorch",
+        "publication": "arXiv preprint arXiv:2109.12298",
+        "url": "https://arxiv.org/abs/2109.12298"
+      },
+      {
+        "authors": "Mironov, I.",
+        "year": "2017",
+        "title": "Rényi differential privacy",
+        "publication": "2017 IEEE 30th computer security foundations symposium (CSF), pp. 263-275",
+        "url": "https://doi.org/10.1109/CSF.2017.11"
+      },
+      {
+        "authors": "McMahan, B., Moore, E., Ramage, D., Hampson, S., & y Arcas, B. A.",
+        "year": "2017",
+        "title": "Communication-efficient learning of deep networks from decentralized data",
+        "publication": "Artificial intelligence and statistics, pp. 1273-1282",
+        "url": "http://proceedings.mlr.press/v54/mcmahan17a.html"
+      }
+    ],
+    "zh": [
+      {
+        "authors": "Saleiro, P., Kuester, B., Hinkson, L., London, J., Stevens, A., Anisfeld, A., ... & Ghani, R.",
+        "year": "2018",
+        "title": "Aequitas：偏见和公平性审计工具包",
+        "publication": "arXiv预印本 arXiv:1811.05577",
+        "url": "https://arxiv.org/abs/1811.05577"
+      },
+      {
+        "authors": "Verma, S., & Rubin, J.",
+        "year": "2018",
+        "title": "公平性定义解释",
+        "publication": "软件公平性国际研讨会论文集，第1-7页",
+        "url": "https://doi.org/10.1145/3194770.3194776"
+      },
+      {
+        "authors": "Angwin, J., Larson, J., Mattu, S., & Kirchner, L.",
+        "year": "2016",
+        "title": "机器偏见：全国使用的预测未来犯罪分子的软件。它对黑人有偏见",
+        "publication": "ProPublica",
+        "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+      },
+      {
+        "authors": "Ribeiro, M. T., Singh, S., & Guestrin, C.",
+        "year": "2016",
+        "title": "我为什么要相信你？解释任何分类器的预测",
+        "publication": "第22届ACM SIGKDD知识发现与数据挖掘国际会议论文集，第1135-1144页",
+        "url": "https://doi.org/10.1145/2939672.2939778"
+      },
+      {
+        "authors": "Lundberg, S. M., & Lee, S. I.",
+        "year": "2017",
+        "title": "解释模型预测的统一方法",
+        "publication": "神经信息处理系统进展，30",
+        "url": "https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html"
+      },
+      {
+        "authors": "Rajkomar, A., Hardt, M., Howell, M. D., Corrado, G., & Chin, M. H.",
+        "year": "2018",
+        "title": "确保机器学习中的公平性以促进健康公平",
+        "publication": "内科医学年鉴，169(12)，866-872",
+        "url": "https://doi.org/10.7326/M18-1990"
+      },
+      {
+        "authors": "Yousefpour, A., Shilov, I., Sablayrolles, A., Testuggine, D., Prasad, K., Malek, M., ... & Bharadwaj, S.",
+        "year": "2021",
+        "title": "Opacus：PyTorch中用户友好的差分隐私库",
+        "publication": "arXiv预印本 arXiv:2109.12298",
+        "url": "https://arxiv.org/abs/2109.12298"
+      },
+      {
+        "authors": "Mironov, I.",
+        "year": "2017",
+        "title": "Rényi差分隐私",
+        "publication": "2017年IEEE第30届计算机安全基础研讨会（CSF），第263-275页",
+        "url": "https://doi.org/10.1109/CSF.2017.11"
+      },
+      {
+        "authors": "McMahan, B., Moore, E., Ramage, D., Hampson, S., & y Arcas, B. A.",
+        "year": "2017",
+        "title": "从分散数据中高效学习深度网络的通信",
+        "publication": "人工智能与统计，第1273-1282页",
+        "url": "http://proceedings.mlr.press/v54/mcmahan17a.html"
+      }
+    ]
+  }
+} 

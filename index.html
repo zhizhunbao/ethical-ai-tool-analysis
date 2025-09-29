@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PHI4005 Ethical AI Tool Analysis - Comprehensive evaluation of fairness, transparency, and privacy tools">
+    <title>PHI4005 Ethical AI Tool Analysis</title>
+    <link rel="stylesheet" href="src/main.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1 class="nav-title" data-i18n="nav.title">Ethical AI Tool Analysis</h1>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#overview" class="nav-link" role="menuitem" data-i18n="nav.overview">Overview</a></li>
+                    <li role="none"><a href="#agenda" class="nav-link" role="menuitem" data-i18n="nav.agenda">Agenda</a></li>
+                    <li role="none"><a href="#fairness" class="nav-link" role="menuitem" data-i18n="nav.fairness">Fairness</a></li>
+                    <li role="none"><a href="#transparency" class="nav-link" role="menuitem" data-i18n="nav.transparency">Transparency</a></li>
+                    <li role="none"><a href="#privacy" class="nav-link" role="menuitem" data-i18n="nav.privacy">Privacy</a></li>
+                    <li role="none"><a href="#comparison" class="nav-link" role="menuitem" data-i18n="nav.comparison">Comparison</a></li>
+                    <li role="none"><a href="#references" class="nav-link" role="menuitem" data-i18n="nav.references">References</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button class="lang-toggle" aria-label="Switch language" data-lang="en">
+                        <span data-i18n="nav.lang">中文</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main" role="main">
+        <!-- Hero/Overview Section -->
+        <section id="overview" class="section hero" aria-labelledby="overview-title">
+            <div class="container">
+                <h1 id="overview-title" class="hero-title" data-i18n="overview.title">Ethical AI Tool Analysis</h1>
+                <p class="hero-subtitle" data-i18n="overview.subtitle">PHI4005 - Comprehensive Evaluation of AI Ethics Tools</p>
+                <div class="hero-info">
+                    <div class="course-info">
+                        <h2 data-i18n="overview.course">Course Information</h2>
+                        <p><strong data-i18n="overview.courseCode">Course:</strong> <span data-i18n="overview.courseTitle">PHI4005 - Ethics in Artificial Intelligence</span></p>
+                        <p><strong data-i18n="overview.semester">Semester:</strong> <span data-i18n="overview.semesterValue">Fall 2024</span></p>
+                    </div>
+                    <div class="team-info">
+                        <h2 data-i18n="overview.team">Team Members</h2>
+                        <ul id="team-list">
+                            <!-- Team members will be loaded from JSON -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agenda Section -->
+        <section id="agenda" class="section" aria-labelledby="agenda-title">
+            <div class="container">
+                <h2 id="agenda-title" class="section-title" data-i18n="agenda.title">Presentation Agenda</h2>
+                <div class="agenda-grid" id="agenda-content">
+                    <!-- Agenda items will be loaded from JSON -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Fairness Tool Section -->
+        <section id="fairness" class="section tool-section" aria-labelledby="fairness-title">
+            <div class="container">
+                <h2 id="fairness-title" class="section-title" data-i18n="fairness.title">Fairness Tool Analysis</h2>
+                <div class="tool-content" id="fairness-content">
+                    <!-- Fairness tool content will be loaded from JSON -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Transparency Tool Section -->
+        <section id="transparency" class="section tool-section" aria-labelledby="transparency-title">
+            <div class="container">
+                <h2 id="transparency-title" class="section-title" data-i18n="transparency.title">Transparency Tool Analysis</h2>
+                <div class="tool-content" id="transparency-content">
+                    <!-- Transparency tool content will be loaded from JSON -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Tool Section -->
+        <section id="privacy" class="section tool-section" aria-labelledby="privacy-title">
+            <div class="container">
+                <h2 id="privacy-title" class="section-title" data-i18n="privacy.title">Privacy Tool Analysis</h2>
+                <div class="tool-content" id="privacy-content">
+                    <!-- Privacy tool content will be loaded from JSON -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparative Summary Section -->
+        <section id="comparison" class="section" aria-labelledby="comparison-title">
+            <div class="container">
+                <h2 id="comparison-title" class="section-title" data-i18n="comparison.title">Comparative Summary</h2>
+                <div class="comparison-content">
+                    <div class="table-container">
+                        <table class="comparison-table" id="comparison-table" role="table" aria-label="Tool comparison table">
+                            <!-- Comparison table will be loaded from JSON -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="section" aria-labelledby="references-title">
+            <div class="container">
+                <h2 id="references-title" class="section-title" data-i18n="references.title">References</h2>
+                <ol class="references-list" id="references-list">
+                    <!-- References will be loaded from JSON -->
+                </ol>
+            </div>
+        </section>
+
+        <!-- Compliance Note Section -->
+        <section id="compliance" class="section compliance" aria-labelledby="compliance-title">
+            <div class="container">
+                <h2 id="compliance-title" class="section-title" data-i18n="compliance.title">Compliance Note</h2>
+                <p class="compliance-text" data-i18n="compliance.text">This presentation strictly adheres to course requirements and does not use AI ethics tools developed by Microsoft or IBM.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 PHI4005 Ethics in Artificial Intelligence</p>
+        </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+</body>
+</html> 
